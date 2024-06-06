@@ -25,7 +25,7 @@ public class ArithmeticController {
               return new ResponseEntity<>(arithmeticResponse, HttpStatus.BAD_REQUEST);
           }
           return new ResponseEntity<>(arithmeticResponse, HttpStatus.OK);
-      }catch ( ArrayIndexOutOfBoundsException e) {
+      }catch ( Exception e) {
           arithmeticResponse.setResponse("Invalid record error");
           return new ResponseEntity<>(arithmeticResponse, HttpStatus.BAD_REQUEST);
       }
